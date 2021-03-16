@@ -1,0 +1,89 @@
+
+a {
+  cursor: pointer;
+}
+
+html,
+body {
+/*  font-family: Nunito, sans-serif;
+*/  font-size:16px;
+}
+
+#legend text {
+  font-size: 0.9em;
+  color: #333;
+  font-weight: 400;
+}
+
+.tooltip {
+  position: absolute;
+  padding: 7px;
+  font-size: 0.9em;
+  pointer-events: none;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.tooltip p {
+  margin: 0;
+  padding: 0;
+}
+
+.tooltip table {
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.small-flex-child {
+  flex: 0 0 25%;     
+      } 
+
+
+.big-flex-child  {
+    flex: 0 0 40%;
+    margin-left: 50px;
+      }
+
+.right-flex-box {
+    flex: 0 0 20%;
+}  
+
+.top-legend-box {
+	display: flex;
+}
+
+.slider_box {
+	display: flex;
+	flex-direction: column;
+/*	margin-left: 60px;
+*/}
+
+.subheading {
+	display: flex;
+	flex-direction: row;
+    font-size: 22px;
+}
+
+.slider {
+	display: flex;
+	flex-direction: row;
+}
+
+.ratio_explanation {
+  padding: 10px;
+  margin-top: 30px;
+  margin-right: 40px;
+  border: 1px solid grey;
+}
+
+.ratio_image {
+  width: 250px;
+}
+

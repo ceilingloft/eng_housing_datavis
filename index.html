@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <title>Housing England</title>
+  </head>
+  <body>
+	<h1 style="font-family:'Playfair Display'; padding-bottom:10px; padding-left:20px;border-bottom:3px solid black;">Changes in median house prices and earnings in England, 1999-2019</h1>
+  	<div class="flex-container">
+  		<div class="small-flex-child" style="margin-left:20px; padding-top:30px; border-right:1px solid black; font-family:'Nunito';font-size:18px;">
+  			<div style="padding-right:10px">
+  			 	House prices have steeply increased over the past 20 years, whereas average wages have remained almost stagnent. Here you can explore how the ratio has changed over time across local authority areas of England.
+  			</div>
+  			<div class='ratio_explanation'>
+  				<div style="font-size:20px;padding-bottom:5px;"><b>
+  					What does the ratio represent?</b><br>
+  				</div>
+  				<div style='padding-bottom:10px'>
+  					If  <img src='images/house.svg' style="width: 25px;"></img> represents the average house price in England, and <img src='images/earnings.svg' style="width: 25px;"></img> represents
+  					the average yearly earnings, then a ratio of 4 would be represented by: <br>
+  				</div>
+  				<img class='ratio_image' src='images/ratio_explanation.svg'></img><br>
+  				In other words a ratio of 4 means the median house price is <b>4x</b> median yearly earnings
+  			</div>
+		</div>
+  		<div class='big-flex-child'>
+  			<div class='top-legend-box'>
+	  				<div class='slider_box'>
+						<div class="year"></div>
+						<div class="slider"></div>
+					</div>
+			</div>
+			<div id="map"></div>
+		</div>
+		 <div class='right-flex-box'>
+			<div id="line-chart" style="padding-top:200px; padding-right:30px"></div>
+		 </div>
+	</div>
+	<p style="font-family:'Nunito';font-size:13px;padding-left:10px;padding-top:20px">Source: <b>Office for National Statistics</b>, "Ratio of house price to workplace-based earnings (lower quartile and median), 1997 to 2019" dataset</p>
+    <script src="bundle.js"></script>
+  </body>
+</html>
