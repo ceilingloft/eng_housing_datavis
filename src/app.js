@@ -10,7 +10,9 @@ import {nest} from 'd3-collection';
 import vegaEmbed from 'vega-embed';
 // this command imports the css file, if you remove it your css wont be applied!
 import './main.css';
-import LineChart from './line-chart';
+import LineChart from 'charts/line-chart';
+import londonLineChart from 'charts/london-line-chart'; 
+
 
 var height = 550,
    width = 450,
@@ -22,49 +24,63 @@ const plotHeight = height + margin.top + margin.bottom;
 
 const data_file = 'data/la_hpearn_ratio.csv'
 const la_geojson_file = 'data/eng_la.json'
-const regions_geojson_file = 'data/eng_regions_topo.json'
+const regions_centroids_file = 'data/eng_regions_centroids.csv'
 
 var legendText = ["", "", "", "", "", ""];
 var legendColors = d3.schemeBlues[8]
 
-
-vegaEmbed('#line-chart', LineChart);
+const lineCharts = {'London': londonLineChart,
+                    'England': LineChart}
 
 Promise.all([
     d3.csv(data_file),
     d3.json(la_geojson_file),
-    d3.json(regions_geojson_file)
+    d3.csv(regions_centroids_file)
 ]).then((results) => {
-    const [data, engLA, regions] = results;
-    myVis(data, engLA, regions)
+    const [data, engLA, centroids] = results;
+    myVis(data, engLA, centroids)
 });
 
-function myVis(data, eng, regions) {
+vegaEmbed('#line-chart', LineChart);
 
-var dataByLA = groupBy(data, 'local_authority_code')
+function myVis(data, eng, centroids) {
 
-console.log(regions)
-console.log(eng)
+  var centroids = groupBy(centroids, 'id')
+  console.log(centroids)
 
-console.log(dataByLA);
+  var dataByLA = groupBy(data, 'local_authority_code')
  
-function getDataLAYear(data) {
-  var ob = {}
-  for (const [key, value] of Object.entries(data)) {
-    ob[key] = groupBy(data[key], 'year')
-} return ob}
+  function getDataLAYear(data) {
+    var ob = {}
+    for (const [key, value] of Object.entries(data)) {
+      ob[key] = groupBy(data[key], 'year')
+  } return ob}
 
-var databyLAYear = getDataLAYear(dataByLA)
+  var databyLAYear = getDataLAYear(dataByLA)
 
-  console.log(databyLAYear['E06000001'][2019][0]);
+  var databyRegion = groupBy(data, 'region_name')
+  console.log(databyRegion)
 
-  var center = d3.geoCentroid(eng)
-  var scale  = 150;
-  var offset = [plotWidth/2, plotHeight/2];
-  var projection = d3.geoMercator().scale(scale).center(center)
-          .translate(offset);  
+  var regionNames = ['England', 'London']
+  var geo = 'England'
 
-  var path = d3.geoPath().projection(projection);
+  var dropdown = d3.select(".drop-down");
+
+  dropdown
+    .append("select")
+    .selectAll("option")
+    .data(regionNames)
+    .enter().append("option")
+    .attr("value", (d) => {return d;})
+    .text((d) => {return d;});
+
+  dropdown
+    .on("change", function (event) {
+      geo = event.target.value
+      console.log(geo);
+      renderMap(geo)
+      renderLineChart(geo)
+    });
 
   const features = eng.features
 
@@ -74,21 +90,7 @@ var databyLAYear = getDataLAYear(dataByLA)
   .attr("class", "tooltip")
   .style("opacity", 0);
 
-  var bounds  = path.bounds(eng);
-  var hscale  = scale*plotWidth  / (bounds[1][0] - bounds[0][0]);
-  var vscale  = scale*plotHeight / (bounds[1][1] - bounds[0][1]);
-  var scale   = (hscale < vscale) ? hscale : vscale;
-  var offset  = [plotWidth + 23 - (bounds[0][0] + bounds[1][0])/2,
-                     plotHeight + 42 -(bounds[0][1] + bounds[1][1])/2];
-
-      // new projection
-  projection = d3.geoMercator().center(center)
-    .scale(scale).translate(offset);
-  path = path.projection(projection);
-
   var color = d3.scaleQuantize([0, 20], d3.schemeBlues[8])
-
-  console.log(dataByLA['E06000001'][0]['ratio'])
 
   const svg = d3.select('#map')
     .append('svg')
@@ -98,16 +100,7 @@ var databyLAYear = getDataLAYear(dataByLA)
 
 
   svg.append("rect").attr('width', plotWidth).attr('height', plotHeight)
-      .style('stroke', 'black').style('fill', 'none').on("click", reset);
-
-  var engShapes = svg.selectAll(".local_authorty") 
-    .data(features) 
-    .attr("id", "local_authority")
-    .enter().append("path") 
-    .attr("d", path)
-    .style("stroke-width", "0.5")
-    .style("stroke", "white")
-    .on("click", clicked);
+      .style('stroke', 'black').style('fill', 'none');
 
 
   // var engRegions = svg.append("path")
@@ -117,41 +110,36 @@ var databyLAYear = getDataLAYear(dataByLA)
   //     .style("stroke", "white")
   //     .style("fill", "transparent");
 
-  var centroids = {}
-  topojson.feature(regions, regions.objects.eng_regions).features.map(function (feature){
-    centroids[feature.id]  = path.centroid(feature);
-    });
+  // console.log(centroids)
 
-  console.log(centroids)
+//   function clicked(d) {
+//   if (active.node() === this) return reset();
+//   active.classed("active", false);
+//   active = d3.select(this).classed("active", true);
 
-  function clicked(d) {
-  if (active.node() === this) return reset();
-  active.classed("active", false);
-  active = d3.select(this).classed("active", true);
+//   var bounds = path.bounds(d.originalTarget.__data__),
+//       dx = bounds[1][0] - bounds[0][0],
+//       dy = bounds[1][1] - bounds[0][1],
+//       x = (bounds[0][0] + bounds[1][0]) / 2,
+//       y = (bounds[0][1] + bounds[1][1]) / 2,
+//       scale = Math.max(1, Math.min(8, 0.9 / Math.max(dx / width, dy / height)));
 
-  var bounds = path.bounds(d.originalTarget.__data__),
-      dx = bounds[1][0] - bounds[0][0],
-      dy = bounds[1][1] - bounds[0][1],
-      x = (bounds[0][0] + bounds[1][0]) / 2,
-      y = (bounds[0][1] + bounds[1][1]) / 2,
-      scale = Math.max(1, Math.min(8, 0.9 / Math.max(dx / width, dy / height)));
-
-  engShapes.transition()
-      .duration(750)
-      .attr("transform", "translate(" + plotWidth / 2 + "," + plotHeight / 2 + ")scale(" + scale + ")translate(" + -x + "," + -y  + ")")
-      .style("stroke-width", 1.5 / scale + "px");
-}
+//   engShapes.transition()
+//       .duration(750)
+//       .attr("transform", "translate(" + plotWidth / 2 + "," + plotHeight / 2 + ")scale(" + scale + ")translate(" + -x + "," + -y  + ")")
+//       .style("stroke-width", 1.5 / scale + "px");
+// }
 
 
-function reset() {
-  active.classed("active", false);
-  active = d3.select(null);
+// function reset() {
+//   active.classed("active", false);
+//   active = d3.select(null);
 
-  engShapes.transition()
-      .duration(750)
-      .attr("transform", d3.zoomIdentity)
-      .style("stroke-width", 2)
-}
+//   engShapes.transition()
+//       .duration(750)
+//       .attr("transform", d3.zoomIdentity)
+//       .style("stroke-width", 2)
+// }
 
   var legend = svg.append("g")
     .attr("id", "legend");
@@ -177,48 +165,105 @@ function reset() {
     .style("text-anchor", "middle")
     .text(function(d, i) { return legendText[i]; });
 
-  let globalYear = 2019;
+  var globalYear = 2019
 
-  function update(year){
-    slider.property("value", year);
-    d3.select('.year').text(year);
-    globalYear = year;
-    engShapes.style("fill", function(d) {
-      return color(databyLAYear[d.properties['lad19cd']][year][0]['ratio'])
-    });
+
+  function renderLineChart(geoArea) {
+    vegaEmbed('#line-chart', lineCharts[geoArea]);
+  }
+
+
+
+  function renderMap(geoArea) {
+    console.log(geoArea)
+    if (geoArea == 'England' | (geoArea == null)) {
+
+      data = eng.features
+      var center = d3.geoCentroid(eng)
+      var scale  = 150;
+      var offset = [plotWidth/2, plotHeight/2];
+      var projection = d3.geoMercator().scale(scale).center(center)
+          .translate(offset);  
+
+      var path = d3.geoPath().projection(projection);
+
+      var bounds  = path.bounds(eng);
+      var hscale  = scale*plotWidth  / (bounds[1][0] - bounds[0][0]);
+      var vscale  = scale*plotHeight / (bounds[1][1] - bounds[0][1]);
+      var scale   = (hscale < vscale) ? hscale : vscale;
+      var offset  = [plotWidth + 23 - (bounds[0][0] + bounds[1][0])/2,
+                       plotHeight + 42 -(bounds[0][1] + bounds[1][1])/2];
+
+        // new projection
+      projection = d3.geoMercator().center(center)
+        .scale(scale).translate(offset);
+
+      path = path.projection(projection);}
+    else {
+      var data = eng.features.filter(function(d) {return d.properties.region_name == geoArea; })
+      console.log(data)
+
+      var center = data[0].properties.region_code
+
+      var scale  = 150;
+      var offset = [plotWidth/2, plotHeight/2];
+      var projection = d3.geoMercator().scale(scale).center(center)
+          .translate(offset);  
+
+      var path = d3.geoPath().projection(projection);
+
+      var bounds  = path.bounds(data);
+      var hscale  = scale*plotWidth  / (bounds[1][0] - bounds[0][0]);
+      var vscale  = scale*plotHeight / (bounds[1][1] - bounds[0][1]);
+      var scale   = (hscale < vscale) ? hscale : vscale;
+      var x = (bounds[0][0] + bounds[1][0]) / 2;
+      var y = (bounds[0][1] + bounds[1][1]) / 2;
+      var offset  = [-x,-y];
+
+        // new projection
+      projection = d3.geoMercator().center(center)
+        .scale(scale).translate(offset);
+
+      path = path.projection(projection);
+
     }
 
-  var slider = d3.select('.slider')
-    .append("input")
-      .attr("type", "range")
-      .attr("min", 1999)
-      .attr("max", 2019)
-      .attr("step", 1)
-      .on("input", function() {
-        var year = this.value;
-        update(year);
-      });
-
-  update(2019);
-
-  engShapes
-    .on("mouseover", function(d) {
-      tooltip.transition()
-      .duration(250)
-      .style("opacity", 1)
-      d3.select(this)
-      .transition()
-      .duration(200)
-      .style("stroke", "black")
-      tooltip.html(
-      "<p><strong>" + databyLAYear[d.target.__data__.properties.lad19cd][globalYear][0]["local_authority_name"] + ", " + databyLAYear[d.target.__data__.properties.lad19cd][2019][0]["region_name"] + ' (' + globalYear + ')' +  "</strong></p>" +
-       "<table><tbody><tr><td class='wide'>Ratio: </td><td>" + databyLAYear[d.target.__data__.properties.lad19cd][globalYear][0]['ratio'] + "</td></tr>" +
-       "<tr><td>Median house price: </td><td>" + " £" + parseInt(databyLAYear[d.target.__data__.properties.lad19cd][globalYear][0]['median_house_price'], 10) + "</td></tr>" +
-       "<tr><td>Median earnings: </td><td>" + " £" + parseInt(databyLAYear[d.target.__data__.properties.lad19cd][globalYear][0]['median_earnings'], 10) + "</td></tr></tbody></table>"
+      var mapShapes = svg.selectAll(".local_authorty") 
+        .data(data) 
+        .attr("id", "local_authority")
+        .enter().append("path") 
+        .join(
+          enter =>
+            enter
+              .append('path')
+              .attr('d', path),
+          update =>
+            update.call(el =>
+              el
+              .attr('d', path)
+          ),
       )
-      .style("left", (d.pageX + 15) + "px")     
-      .style("top", d.pageY + "px");
-    })
+        .style("stroke-width", "0.5")
+        .style("stroke", "white")
+
+      mapShapes
+      .on("mouseover", function(d) {
+        tooltip.transition()
+        .duration(250)
+        .style("opacity", 1)
+        d3.select(this)
+        .transition()
+        .duration(200)
+        .style("stroke", "black")
+        tooltip.html(
+        "<p><strong>" + databyLAYear[d.target.__data__.properties.lad19cd][globalYear][0]["local_authority_name"] + ", " + databyLAYear[d.target.__data__.properties.lad19cd][2019][0]["region_name"] + ' (' + globalYear + ')' +  "</strong></p>" +
+        "<table><tbody><tr><td class='wide'>Ratio: </td><td>" + databyLAYear[d.target.__data__.properties.lad19cd][globalYear][0]['ratio'] + "</td></tr>" +
+        "<tr><td>Median house price: </td><td>" + " £" + parseInt(databyLAYear[d.target.__data__.properties.lad19cd][globalYear][0]['median_house_price'], 10) + "</td></tr>" +
+        "<tr><td>Median earnings: </td><td>" + " £" + parseInt(databyLAYear[d.target.__data__.properties.lad19cd][globalYear][0]['median_earnings'], 10) + "</td></tr></tbody></table>"
+        )
+        .style("left", (d.pageX + 15) + "px")     
+        .style("top", d.pageY + "px");
+      })
     .on("mouseout", function(d) {
       tooltip.transition()
       .duration(250)
@@ -229,6 +274,31 @@ function reset() {
       .style("stroke-width", "0.5")
       .style("stroke", "white");
     });
+
+  }
+    renderMap()
+
+        function change(year){
+         slider.property("value", year);
+         d3.select('.year').text(year);
+         globalYear = year;
+         svg.selectAll("path")
+        .style("fill", function(d) {
+        return color(databyLAYear[d.properties['lad19cd']][year][0]['ratio'])})
+    };
+
+    var slider = d3.select('.slider')
+      .append("input")
+      .attr("type", "range")
+      .attr("min", 1999)
+      .attr("max", 2019)
+      .attr("step", 1)
+      .on("input", function() {
+        var year = this.value;
+        change(year);
+      });
+
+          change(2019);
 
 };
 

@@ -6,7 +6,8 @@ export default {
   "height": 300,
   "title": {
     "anchor": "start",
-    "offset": 20},
+    "offset": 20,
+  },
   "style": "cell",
   "data": [
     {
@@ -118,7 +119,7 @@ export default {
     {
       "name": "y",
       "type": "linear",
-      "domain": {"data": "data_0", "field": "Median amount (£)"},
+      "domain": [0, 500000],
       "range": [{"signal": "height"}, 0],
       "nice": true,
       "zero": true
