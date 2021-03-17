@@ -57,6 +57,13 @@ body {
 
 .top-legend-box {
 	display: flex;
+  flex-direction: row;
+}
+
+.drop-down {
+  display: flex;
+  padding-left: 220px;
+  height: 30px;
 }
 
 .slider_box {
