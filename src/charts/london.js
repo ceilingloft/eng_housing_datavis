@@ -7,6 +7,7 @@ export default {
   "title": {
     "anchor": "start",
     "offset": 20,
+    "text": "London"
   },
   "style": "cell",
   "data": [
@@ -371,7 +372,7 @@ export default {
     {
       "name": "y",
       "type": "linear",
-      "domain": {"data": "data_0", "field": "Median amount (£)"},
+      "domain": [0, 500000],
       "range": [{"signal": "height"}, 0],
       "nice": true,
       "zero": true
@@ -480,7 +481,7 @@ export default {
     "style": {
       "cell": {"strokeWidth": 0},
       "group-title": {
-        "fontSize": 15,
+        "fontSize": 20,
         "font": "Playfair Display, serif",
         "fontWeight": 600,
         "fill": "#3c3f42"

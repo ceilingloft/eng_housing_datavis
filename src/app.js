@@ -10,9 +10,29 @@ import {nest} from 'd3-collection';
 import vegaEmbed from 'vega-embed';
 // this command imports the css file, if you remove it your css wont be applied!
 import './main.css';
-import LineChart from 'charts/line-chart';
-import londonLineChart from 'charts/london-line-chart'; 
+import england from './charts/england';
 
+import london from './charts/london';
+import east from './charts/east';
+import northEast from './charts/north-east';
+import northWest from './charts/north-west';
+import southEast from './charts/south-east';
+import southWest from './charts/south-west';
+import westMidlands from './charts/west-midlands';
+import eastMidlands from './charts/east-midlands';
+import yorkshire from './charts/yorkshire';
+
+const regions = {'London': london,
+                  'England': england,
+                  'East of England': east,
+                  'North East': northEast,
+                  'North West': northWest,
+                  'Yorkshire and The Humber': yorkshire,
+                  'South East': southEast,
+                  'South West': southWest,
+                  'East Midlands': eastMidlands,
+                  'West Midlands': westMidlands
+                  }
 
 var height = 550,
    width = 450,
@@ -29,9 +49,6 @@ const regions_centroids_file = 'data/eng_regions_centroids.csv'
 var legendText = ["", "", "", "", "", ""];
 var legendColors = d3.schemeBlues[8]
 
-const lineCharts = {'London': londonLineChart,
-                    'England': LineChart}
-
 Promise.all([
     d3.csv(data_file),
     d3.json(la_geojson_file),
@@ -41,7 +58,7 @@ Promise.all([
     myVis(data, engLA, centroids)
 });
 
-vegaEmbed('#line-chart', LineChart);
+vegaEmbed('#line-chart', england);
 
 function myVis(data, eng, centroids) {
 
@@ -61,7 +78,7 @@ function myVis(data, eng, centroids) {
   var databyRegion = groupBy(data, 'region_name')
   console.log(databyRegion)
 
-  var regionNames = ['England', 'London']
+  var regionNames = ['England', 'London', 'East of England', 'North East','North West', 'Yorkshire and The Humber','South East', 'South West', 'East Midlands', 'West Midlands']
   var geo = 'England'
 
   var dropdown = d3.select(".drop-down");
@@ -169,7 +186,7 @@ function myVis(data, eng, centroids) {
 
 
   function renderLineChart(geoArea) {
-    vegaEmbed('#line-chart', lineCharts[geoArea]);
+    vegaEmbed('#line-chart', regions[geoArea])
   }
 
 

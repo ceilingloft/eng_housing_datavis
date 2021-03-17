@@ -7,6 +7,7 @@ export default {
   "title": {
     "anchor": "start",
     "offset": 20,
+    "text": "England"
   },
   "style": "cell",
   "data": [
@@ -228,7 +229,7 @@ export default {
     "style": {
       "cell": {"strokeWidth": 0},
       "group-title": {
-        "fontSize": 15,
+        "fontSize": 20,
         "font": "Playfair Display, serif",
         "fontWeight": 600,
         "fill": "#3c3f42"
