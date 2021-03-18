@@ -83,6 +83,8 @@ function myVis(data, eng, centroids) {
 
   var dropdown = d3.select(".drop-down");
 
+  var globalYear = 2019;
+
   dropdown
     .append("select")
     .selectAll("option")
@@ -91,11 +93,48 @@ function myVis(data, eng, centroids) {
     .attr("value", (d) => {return d;})
     .text((d) => {return d;});
 
+  var slider = d3.select('.slider')
+      .append("input")
+      .attr("type", "range")
+      .attr("min", 1999)
+      .attr("max", 2019)
+      .attr("step", 1)
+      .on("input", function() {
+        console.log(dropdown.value)
+        var year = this.value
+        slider.property("value", year)
+        d3.select('.year').text(year);
+        globalYear = year;
+        renderMap(geo, globalYear)
+      });
+
+
+    //     function change(year){
+    //      slider.property("value", year);
+    //      d3.select('.year').text(year);
+    //      globalYear = year;
+    //      svg.selectAll("path")
+    //     .style("fill", function(d) {
+    //     return color(databyLAYear[d.properties['lad19cd']][year][0]['ratio'])})
+    // };
+
+    // var slider = d3.select('.slider')
+    //   .append("input")
+    //   .attr("type", "range")
+    //   .attr("min", 1999)
+    //   .attr("max", 2019)
+    //   .attr("step", 1)
+    //   .on("input", function() {
+    //     var year = this.value;
+    //     change(year);
+    //   });
+
   dropdown
     .on("change", function (event) {
       geo = event.target.value
-      console.log(geo);
-      renderMap(geo)
+      console.log(geo, globalYear);
+      renderMap(geo, globalYear)
+      console.log(globalYear)
       renderLineChart(geo)
     });
 
@@ -119,44 +158,6 @@ function myVis(data, eng, centroids) {
   svg.append("rect").attr('width', plotWidth).attr('height', plotHeight)
       .style('stroke', 'black').style('fill', 'none');
 
-
-  // var engRegions = svg.append("path")
-  //     .datum(topojson.feature(regions, regions.objects.eng_regions, function(a, b) { return a !== b; })) 
-  //     .attr("d", path(topojson.mesh(regions, regions.objects.eng_regions, (a, b) => a !== b)))
-  //     .style("stroke-width", "2")
-  //     .style("stroke", "white")
-  //     .style("fill", "transparent");
-
-  // console.log(centroids)
-
-//   function clicked(d) {
-//   if (active.node() === this) return reset();
-//   active.classed("active", false);
-//   active = d3.select(this).classed("active", true);
-
-//   var bounds = path.bounds(d.originalTarget.__data__),
-//       dx = bounds[1][0] - bounds[0][0],
-//       dy = bounds[1][1] - bounds[0][1],
-//       x = (bounds[0][0] + bounds[1][0]) / 2,
-//       y = (bounds[0][1] + bounds[1][1]) / 2,
-//       scale = Math.max(1, Math.min(8, 0.9 / Math.max(dx / width, dy / height)));
-
-//   engShapes.transition()
-//       .duration(750)
-//       .attr("transform", "translate(" + plotWidth / 2 + "," + plotHeight / 2 + ")scale(" + scale + ")translate(" + -x + "," + -y  + ")")
-//       .style("stroke-width", 1.5 / scale + "px");
-// }
-
-
-// function reset() {
-//   active.classed("active", false);
-//   active = d3.select(null);
-
-//   engShapes.transition()
-//       .duration(750)
-//       .attr("transform", d3.zoomIdentity)
-//       .style("stroke-width", 2)
-// }
 
   var legend = svg.append("g")
     .attr("id", "legend");
@@ -182,17 +183,14 @@ function myVis(data, eng, centroids) {
     .style("text-anchor", "middle")
     .text(function(d, i) { return legendText[i]; });
 
-  var globalYear = 2019
 
-
-  function renderLineChart(geoArea) {
+  function renderLineChart(geoArea, year) {
     vegaEmbed('#line-chart', regions[geoArea])
   }
 
 
-
-  function renderMap(geoArea) {
-    console.log(geoArea)
+  function renderMap(geoArea, year) {
+    console.log(geoArea,year )
     if (geoArea == 'England' | (geoArea == null)) {
 
       data = eng.features
@@ -220,48 +218,35 @@ function myVis(data, eng, centroids) {
       var data = eng.features.filter(function(d) {return d.properties.region_name == geoArea; })
       console.log(data)
 
-      var center = data[0].properties.region_code
+      // var center = centroids[data[0].properties.region_code][0]['centroid']
+      var center = [-0.1110575105808903, 51.50059566483052]
+      console.log(center)
 
-      var scale  = 150;
+      var scale  = 7000;
       var offset = [plotWidth/2, plotHeight/2];
       var projection = d3.geoMercator().scale(scale).center(center)
           .translate(offset);  
 
       var path = d3.geoPath().projection(projection);
 
-      var bounds  = path.bounds(data);
-      var hscale  = scale*plotWidth  / (bounds[1][0] - bounds[0][0]);
-      var vscale  = scale*plotHeight / (bounds[1][1] - bounds[0][1]);
-      var scale   = (hscale < vscale) ? hscale : vscale;
-      var x = (bounds[0][0] + bounds[1][0]) / 2;
-      var y = (bounds[0][1] + bounds[1][1]) / 2;
-      var offset  = [-x,-y];
-
-        // new projection
-      projection = d3.geoMercator().center(center)
-        .scale(scale).translate(offset);
-
-      path = path.projection(projection);
-
     }
-
-      var mapShapes = svg.selectAll(".local_authorty") 
+    
+      d3.selectAll(".local_authority").remove();
+      
+      var mapShapes = svg.selectAll(".local_authority") 
         .data(data) 
-        .attr("id", "local_authority")
-        .enter().append("path") 
-        .join(
+         .join(
           enter =>
             enter
               .append('path')
-              .attr('d', path),
-          update =>
-            update.call(el =>
-              el
-              .attr('d', path)
-          ),
-      )
+              .attr('d', x => {
+                return path(x)}),
+      )       .attr("class", "local_authority")
+
         .style("stroke-width", "0.5")
         .style("stroke", "white")
+        .style("fill", function(d) {
+        return color(databyLAYear[d.properties['lad19cd']][year][0]['ratio'])})
 
       mapShapes
       .on("mouseover", function(d) {
@@ -293,31 +278,6 @@ function myVis(data, eng, centroids) {
     });
 
   }
-    renderMap()
-
-        function change(year){
-         slider.property("value", year);
-         d3.select('.year').text(year);
-         globalYear = year;
-         svg.selectAll("path")
-        .style("fill", function(d) {
-        return color(databyLAYear[d.properties['lad19cd']][year][0]['ratio'])})
-    };
-
-    var slider = d3.select('.slider')
-      .append("input")
-      .attr("type", "range")
-      .attr("min", 1999)
-      .attr("max", 2019)
-      .attr("step", 1)
-      .on("input", function() {
-        var year = this.value;
-        change(year);
-      });
-
-          change(2019);
+    renderMap('England', 2019);
 
 };
-
-
-
