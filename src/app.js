@@ -44,7 +44,6 @@ const plotHeight = height + margin.top + margin.bottom;
 
 const data_file = 'data/la_hpearn_ratio.csv'
 const la_geojson_file = 'data/eng_la.json'
-const regions_centroids_file = 'data/eng_regions_centroids.csv'
 
 var legendText = ["", "", "", "", "", ""];
 var legendColors = d3.schemeBlues[8]
@@ -52,17 +51,26 @@ var legendColors = d3.schemeBlues[8]
 Promise.all([
     d3.csv(data_file),
     d3.json(la_geojson_file),
-    d3.csv(regions_centroids_file)
 ]).then((results) => {
-    const [data, engLA, centroids] = results;
-    myVis(data, engLA, centroids)
+    const [data, engLA] = results;
+    myVis(data, engLA )
 });
+
+var centroids = {
+        "E12000001":[-1.905416023775942, 55.01996537696989],
+        "E12000002":[-2.723198763300704, 54.0565405820666],
+        "E12000003":[-1.229684349202576, 53.96550689063676],
+        "E12000004":[-0.8056317083673057, 52.92687321130552],
+        "E12000005":[-2.270822281605636, 52.48031635147623],
+        "E12000006":[0.5391120229726339, 52.25112720430162],
+        "E12000007":[-0.1110575105808903, 51.50059566483052],
+        "E12000008":[-0.5339793185931326, 51.28108300426047],
+        "E12000009":[-3.130347375749214, 51.00133721589011]}
 
 vegaEmbed('#line-chart', england);
 
-function myVis(data, eng, centroids) {
+function myVis(data, eng) {
 
-  var centroids = groupBy(centroids, 'id')
   console.log(centroids)
 
   var dataByLA = groupBy(data, 'local_authority_code')
@@ -99,35 +107,12 @@ function myVis(data, eng, centroids) {
       .attr("min", 1999)
       .attr("max", 2019)
       .attr("step", 1)
+      .property("value", globalYear)
+      .text(globalYear)
       .on("input", function() {
-        console.log(dropdown.value)
-        var year = this.value
-        slider.property("value", year)
-        d3.select('.year').text(year);
-        globalYear = year;
+        globalYear = this.value;
         renderMap(geo, globalYear)
       });
-
-
-    //     function change(year){
-    //      slider.property("value", year);
-    //      d3.select('.year').text(year);
-    //      globalYear = year;
-    //      svg.selectAll("path")
-    //     .style("fill", function(d) {
-    //     return color(databyLAYear[d.properties['lad19cd']][year][0]['ratio'])})
-    // };
-
-    // var slider = d3.select('.slider')
-    //   .append("input")
-    //   .attr("type", "range")
-    //   .attr("min", 1999)
-    //   .attr("max", 2019)
-    //   .attr("step", 1)
-    //   .on("input", function() {
-    //     var year = this.value;
-    //     change(year);
-    //   });
 
   dropdown
     .on("change", function (event) {
@@ -188,6 +173,8 @@ function myVis(data, eng, centroids) {
     vegaEmbed('#line-chart', regions[geoArea])
   }
 
+  var nfObject = new Intl.NumberFormat('en-US')
+
 
   function renderMap(geoArea, year) {
     console.log(geoArea,year )
@@ -218,11 +205,20 @@ function myVis(data, eng, centroids) {
       var data = eng.features.filter(function(d) {return d.properties.region_name == geoArea; })
       console.log(data)
 
-      // var center = centroids[data[0].properties.region_code][0]['centroid']
-      var center = [-0.1110575105808903, 51.50059566483052]
+      var center = centroids[data[0].properties.region_code]
+      // var center = [-0.1110575105808903, 51.50059566483052]
       console.log(center)
 
-      var scale  = 7000;
+      if (geoArea == 'London') {
+        scale = 30000;
+      } else if (geoArea == 'South East') {
+         scale = 7500;
+      } else if ( geoArea == 'South West') {
+         scale = 6500;
+      } else {
+         scale  = 9000;
+      }
+      console.log(center)
       var offset = [plotWidth/2, plotHeight/2];
       var projection = d3.geoMercator().scale(scale).center(center)
           .translate(offset);  
@@ -230,6 +226,8 @@ function myVis(data, eng, centroids) {
       var path = d3.geoPath().projection(projection);
 
     }
+        slider.property("value", year)
+        d3.select('.year').text(year);
     
       d3.selectAll(".local_authority").remove();
       
@@ -260,8 +258,8 @@ function myVis(data, eng, centroids) {
         tooltip.html(
         "<p><strong>" + databyLAYear[d.target.__data__.properties.lad19cd][globalYear][0]["local_authority_name"] + ", " + databyLAYear[d.target.__data__.properties.lad19cd][2019][0]["region_name"] + ' (' + globalYear + ')' +  "</strong></p>" +
         "<table><tbody><tr><td class='wide'>Ratio: </td><td>" + databyLAYear[d.target.__data__.properties.lad19cd][globalYear][0]['ratio'] + "</td></tr>" +
-        "<tr><td>Median house price: </td><td>" + " £" + parseInt(databyLAYear[d.target.__data__.properties.lad19cd][globalYear][0]['median_house_price'], 10) + "</td></tr>" +
-        "<tr><td>Median earnings: </td><td>" + " £" + parseInt(databyLAYear[d.target.__data__.properties.lad19cd][globalYear][0]['median_earnings'], 10) + "</td></tr></tbody></table>"
+        "<tr><td>Median house price: </td><td>" + " £" + nfObject.format(parseInt(databyLAYear[d.target.__data__.properties.lad19cd][globalYear][0]['median_house_price'], 10)) + "</td></tr>" +
+        "<tr><td>Median earnings: </td><td>" + " £" + nfObject.format(parseInt(databyLAYear[d.target.__data__.properties.lad19cd][globalYear][0]['median_earnings'], 10)) + "</td></tr></tbody></table>"
         )
         .style("left", (d.pageX + 15) + "px")     
         .style("top", d.pageY + "px");
