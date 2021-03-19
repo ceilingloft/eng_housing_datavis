@@ -18,294 +18,294 @@ export default {
           "Code": "E12000007",
           "Name": "London",
           "year": 1999,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 111000
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 1999,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 22487
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2000,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 134000
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2000,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 24204
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2001,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 150000
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2001,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 25215
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2002,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 174000
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2002,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 26467
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2003,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 195000
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2003,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 27455
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2004,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 217000
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2004,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 28750
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2005,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 229000
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2005,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 29882
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2006,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 240000
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2006,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 30355
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2007,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 250000
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2007,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 31484
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2008,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 265000
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2008,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 32813
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2009,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 250000
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2009,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 33700
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2010,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 280000
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2010,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 33990
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2011,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 292562.5
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2011,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 34396
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2012,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 297500
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2012,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 34883
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2013,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 315000
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2013,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 35173
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2014,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 353000
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2014,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 35034
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2015,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 390000
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2015,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 35303
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2016,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 435000
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2016,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 36170
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2017,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 460000
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2017,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 37171
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2018,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 467500
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2018,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 38146
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2019,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 470000
         },
         {
           "Code": "E12000007",
           "Name": "London",
           "year": 2019,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 38992
         }
       ]

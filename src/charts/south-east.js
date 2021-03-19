@@ -14,294 +14,294 @@ export default {
           "Code": "E12000008",
           "Name": "South East",
           "year": 1999,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 89000
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 1999,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 18737
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2000,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 106950
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2000,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 19992
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2001,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 123000
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2001,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 20907
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2002,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 140000
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2002,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 21940
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2003,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 165000
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2003,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 22843
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2004,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 181000
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2004,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 23748
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2005,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 190000
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2005,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 24229
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2006,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 199000
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2006,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 24798
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2007,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 215000
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2007,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 25583
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2008,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 220000
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2008,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 26778
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2009,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 200000
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2009,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 27458
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2010,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 223000
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2010,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 27503
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2011,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 224950
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2011,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 27881
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2012,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 225000
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2012,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 28175
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2013,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 234000
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2013,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 28315
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2014,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 245000
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2014,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 28607
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2015,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 265000
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2015,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 29031
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2016,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 290000
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2016,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 29700
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2017,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 310000
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2017,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 30236
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2018,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 320000
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2018,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 30849
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2019,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 324995
         },
         {
           "Code": "E12000008",
           "Name": "South East",
           "year": 2019,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 32120
         }
       ]

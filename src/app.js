@@ -34,8 +34,8 @@ const regionLineCharts = {'London': london,
                   'West Midlands': westMidlands
                   }
 
-var height = 550,
-   width = 450,
+var height = 600,
+   width = 480,
     active = d3.select(null);
 
 const margin = {left: 50, top: 50, bottom: 50, right: 50};
@@ -73,8 +73,6 @@ vegaEmbed('#line-chart', england);
 
 function myVis(data, eng, regions) {
 
-  console.log(topojson.feature(regions, regions.objects.eng_regions).features)
-
   var dataByLA = groupBy(data, 'local_authority_code')
  
   function getDataLAYear(data) {
@@ -86,7 +84,6 @@ function myVis(data, eng, regions) {
   var databyLAYear = getDataLAYear(dataByLA)
 
   var databyRegion = groupBy(data, 'region_name')
-  console.log(databyRegion)
 
   var regionNames = ['England', 'London', 'East of England', 'North East','North West', 'Yorkshire and The Humber','South East', 'South West', 'East Midlands', 'West Midlands']
   var geo = 'England'
@@ -119,14 +116,11 @@ function myVis(data, eng, regions) {
   dropdown
     .on("change", function (event) {
       geo = event.target.value
-      console.log(geo, globalYear);
       renderMap(geo, globalYear)
       renderLineChart(geo)
     });
 
   const features = eng.features
-
-  console.log(features)
 
   var tooltip = d3.select("body").append("div")
   .attr("class", "tooltip")
@@ -136,12 +130,12 @@ function myVis(data, eng, regions) {
 
   const svg = d3.select('#map')
     .append('svg')
-    .attr('height', plotHeight)
-    .attr('width', plotWidth+50)
+    .attr('height', plotHeight+10)
+    .attr('width', plotWidth+100)
     .append("g");
 
 
-  svg.append("rect").attr('width', plotWidth+50).attr('height', plotHeight)
+  svg.append("rect").attr('width', plotWidth+100).attr('height', plotHeight+10)
       .style('stroke', 'black').style('fill', 'none');
 
 
@@ -204,7 +198,6 @@ function myVis(data, eng, regions) {
 
 
   function renderMap(geoArea, year) {
-    console.log(geoArea,year )
     if (geoArea == 'England' | (geoArea == null)) {
 
       data = eng.features
@@ -235,16 +228,19 @@ function myVis(data, eng, regions) {
       var center = centroids[regionCode]
 
       if (geoArea == 'London') {
-        var scale = 30000;
+        var scale = 38000;
         var offset = [plotWidth/2, plotHeight/2];
       } else if (geoArea == 'South East') {
-         var scale = 8000;
+         var scale = 9000;
+         var offset = [plotWidth/2-10, plotHeight/2];
+      } else if (geoArea == 'North West') {
+         var scale = 9000;
          var offset = [plotWidth/2-10, plotHeight/2];
       } else if ( geoArea == 'South West') {
-         var offset = [plotWidth/2+50, plotHeight/2];
-         var scale = 6500;
+         var offset = [plotWidth/2+60, plotHeight/2];
+         var scale = 7500;
       } else {
-         var scale  = 9000;
+         var scale  = 11000;
          var offset = [plotWidth/2+20, plotHeight/2];
     }
       var projection = d3.geoMercator().scale(scale).center(center)

@@ -18,294 +18,294 @@ export default {
           "Code": "E12000001",
           "Name": "North East",
           "year": 1999,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 50000
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 1999,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 16282
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2000,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 52000
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2000,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 17430
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2001,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 53725
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2001,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 17844
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2002,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 59500
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2002,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 18076
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2003,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 72000
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2003,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 18228
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2004,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 92000
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2004,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 19247
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2005,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 105000
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2005,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 20263
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2006,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 117000
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2006,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 20613
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2007,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 122000
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2007,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 21076
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2008,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 122000
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2008,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 21931
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2009,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 118000
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2009,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 22684
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2010,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 124950
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2010,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 23124
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2011,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 118950
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2011,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 23250
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2012,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 119000
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2012,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 23781
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2013,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 121000
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2013,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 24113
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2014,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 125000
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2014,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 24904
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2015,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 130500
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2015,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 25347
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2016,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 133500
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2016,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 25561
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2017,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 135000
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2017,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 25904
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2018,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 139995
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2018,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 26355
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2019,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 141400
         },
         {
           "Code": "E12000001",
           "Name": "North East",
           "year": 2019,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 27187
         }
       ]

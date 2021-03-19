@@ -14,294 +14,294 @@ export default {
           "Code": "E12000006",
           "Name": "East",
           "year": 1999,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 73995
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 1999,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 18000
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2000,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 84000
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2000,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 19020
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2001,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 95500
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2001,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 19978
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2002,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 118500
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2002,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 20495
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2003,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 140000
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2003,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 21511
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2004,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 159995
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2004,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 22242
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2005,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 169000
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2005,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 22883
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2006,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 175000
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2006,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 23517
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2007,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 186950
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2007,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 24061
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2008,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 190000
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2008,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 24949
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2009,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 175000
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2009,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 25500
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2010,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 189000
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2010,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 25379
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2011,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 190000
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2011,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 25953
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2012,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 190000
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2012,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 26145
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2013,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 197000
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2013,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 26514
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2014,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 210000
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2014,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 26817
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2015,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 230000
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2015,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 27300
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2016,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 250000
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2016,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 27892
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2017,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 275000
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2017,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 28456
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2018,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 284995
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2018,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 29153
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2019,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 287500
         },
         {
           "Code": "E12000006",
           "Name": "East",
           "year": 2019,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 30345
         }
       ]
@@ -312,7 +312,7 @@ export default {
       "transform": [
         {
           "type": "formula",
-          "expr": "datum[\"Index\"]===\"House price\" ? 0 : 1",
+          "expr": "datum[\"InHex\"]===\"House price\" ? 0 : 1",
           "as": "color_Index_sort_index"
         }
       ]

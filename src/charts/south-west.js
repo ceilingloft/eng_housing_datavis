@@ -14,294 +14,294 @@ export default{
           "Code": "E12000009",
           "Name": "South West",
           "year": 1999,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 71000
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 1999,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 16727
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2000,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 82000
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2000,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 17847
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2001,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 93000
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2001,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 18465
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2002,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 115000
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2002,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 19233
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2003,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 139950
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2003,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 20000
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2004,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 159950
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2004,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 20694
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2005,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 169950
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2005,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 21279
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2006,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 175000
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2006,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 21815
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2007,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 187995
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2007,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 22665
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2008,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 190000
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2008,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 23648
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2009,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 175000
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2009,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 24175
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2010,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 187000
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2010,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 24098
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2011,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 185000
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2011,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 24306
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2012,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 186500
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2012,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 24581
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2013,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 189950
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2013,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 25242
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2014,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 199000
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2014,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 25585
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2015,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 212000
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2015,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 25950
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2016,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 225000
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2016,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 26372
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2017,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 239995
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2017,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 27119
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2018,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 249500
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2018,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 27956
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2019,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 252000
         },
         {
           "Code": "E12000009",
           "Name": "South West",
           "year": 2019,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 28654
         }
       ]

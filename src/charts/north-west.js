@@ -18,294 +18,294 @@ export default {
           "Code": "E12000002",
           "Name": "North West",
           "year": 1999,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 52500
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 1999,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 16977
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2000,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 56000
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2000,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 17863
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2001,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 59950
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2001,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 18567
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2002,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 67500
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2002,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 19234
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2003,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 80000
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2003,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 19916
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2004,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 100500
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2004,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 20717
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2005,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 116500
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2005,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 21777
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2006,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 125000
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2006,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 22000
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2007,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 133500
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2007,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 22889
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2008,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 132500
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2008,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 23740
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2009,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 125000
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2009,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 24020
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2010,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 132000
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2010,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 24127
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2011,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 127500
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2011,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 24167
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2012,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 129000
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2012,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 24603
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2013,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 130000
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2013,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 25111
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2014,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 137000
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2014,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 25262
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2015,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 142500
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2015,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 25667
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2016,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 148000
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2016,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 26220
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2017,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 155000
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2017,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 26754
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2018,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 160000
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2018,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 27376
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2019,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 165000
         },
         {
           "Code": "E12000002",
           "Name": "North West",
           "year": 2019,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 28137
         }
       ]

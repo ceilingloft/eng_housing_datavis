@@ -18,294 +18,294 @@ export default {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 1999,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 52000
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 1999,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 16527
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2000,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 55000
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2000,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 17503
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2001,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 59000
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2001,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 18270
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2002,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 66950
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2002,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 18863
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2003,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 82500
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2003,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 19659
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2004,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 105000
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2004,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 20433
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2005,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 118125
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2005,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 21506
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2006,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 125000
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2006,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 21674
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2007,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 134500
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2007,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 22307
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2008,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 134000
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2008,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 23357
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2009,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 126500
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2009,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 23891
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2010,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 135000
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2010,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 23856
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2011,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 130000
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2011,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 24119
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2012,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 130000
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2012,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 24288
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2013,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 132000
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2013,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 24933
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2014,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 138500
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2014,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 24999
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2015,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 143000
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2015,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 25194
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2016,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 149950
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2016,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 25946
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2017,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 155000
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2017,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 26309
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2018,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 160000
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2018,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 26892
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2019,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 164000
         },
         {
           "Code": "E12000003",
           "Name": "Yorkshire and The Humber",
           "year": 2019,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 27835
         }
       ]

@@ -14,294 +14,294 @@ export default {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 1999,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 59950
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 1999,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 17000
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2000,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 65500
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2000,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 17812
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2001,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 73500
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2001,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 18756
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2002,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 85000
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2002,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 19225
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2003,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 103000
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2003,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 19786
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2004,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 125000
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2004,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 20765
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2005,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 133000
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2005,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 21447
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2006,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 140000
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2006,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 22000
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2007,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 146000
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2007,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 22543
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2008,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 145000
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2008,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 23849
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2009,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 139950
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2009,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 23958
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2010,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 147500
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2010,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 23831
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2011,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 144000
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2011,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 24291
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2012,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 145000
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2012,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 24573
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2013,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 148000
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2013,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 25328
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2014,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 155000
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2014,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 24963
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2015,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 161000
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2015,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 25682
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2016,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 168000
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2016,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 26352
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2017,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 178000
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2017,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 26837
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2018,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 188000
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2018,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 27682
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2019,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 194995
         },
         {
           "Code": "E12000005",
           "Name": "West Midlands",
           "year": 2019,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 28536
         }
       ]

@@ -192,7 +192,7 @@ export default {
       "titleFontSize": 14,
       "titleFontWeight": 80,
       "titlePadding": 10,
-      "titleColor": "#3c3f42",
+      "titleColor": "#3C3F42",
       "labelAngle": -65
     },
     "axisY": {

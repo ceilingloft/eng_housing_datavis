@@ -14,294 +14,294 @@ export default {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 1999,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 56000
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 1999,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 16392
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2000,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 60000
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2000,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 17352
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2001,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 68000
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2001,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 18291
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2002,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 79995
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2002,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 19125
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2003,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 99950
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2003,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 19847
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2004,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 123000
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2004,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 20691
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2005,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 130500
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2005,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 21494
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2006,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 135000
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2006,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 21946
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2007,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 142995
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2007,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 22222
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2008,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 142000
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2008,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 23271
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2009,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 132000
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2009,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 24357
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2010,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 140000
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2010,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 24118
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2011,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 136995
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2011,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 24002
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2012,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 137372
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2012,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 24626
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2013,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 140000
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2013,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 24918
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2014,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 148500
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2014,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 25000
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2015,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 157000
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2015,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 25003
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2016,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 165250
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2016,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 25474
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2017,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 176995
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2017,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 25882
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2018,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 186000
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2018,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 26711
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2019,
-          "Index": "house price",
+          "Index": "House price",
           "Median amount (£)": 192000
         },
         {
           "Code": "E12000004",
           "Name": "East Midlands",
           "year": 2019,
-          "Index": "earnings",
+          "Index": "Earnings",
           "Median amount (£)": 28000
         }
       ]
