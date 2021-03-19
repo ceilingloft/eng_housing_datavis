@@ -22,7 +22,7 @@ import westMidlands from './charts/west-midlands';
 import eastMidlands from './charts/east-midlands';
 import yorkshire from './charts/yorkshire';
 
-const regions = {'London': london,
+const regionLineCharts = {'London': london,
                   'England': england,
                   'East of England': east,
                   'North East': northEast,
@@ -44,6 +44,7 @@ const plotHeight = height + margin.top + margin.bottom;
 
 const data_file = 'data/la_hpearn_ratio.csv'
 const la_geojson_file = 'data/eng_la.json'
+const eng_regions_topo = 'data/eng_regions_topo.json'
 
 var legendText = ["", "", "", "", "", ""];
 var legendColors = d3.schemeBlues[8]
@@ -51,9 +52,10 @@ var legendColors = d3.schemeBlues[8]
 Promise.all([
     d3.csv(data_file),
     d3.json(la_geojson_file),
+    d3.json(eng_regions_topo)
 ]).then((results) => {
-    const [data, engLA] = results;
-    myVis(data, engLA )
+    const [data, engLA, regions] = results;
+    myVis(data, engLA, regions)
 });
 
 var centroids = {
@@ -69,9 +71,9 @@ var centroids = {
 
 vegaEmbed('#line-chart', england);
 
-function myVis(data, eng) {
+function myVis(data, eng, regions) {
 
-  console.log(centroids)
+  console.log(topojson.feature(regions, regions.objects.eng_regions).features)
 
   var dataByLA = groupBy(data, 'local_authority_code')
  
@@ -119,7 +121,6 @@ function myVis(data, eng) {
       geo = event.target.value
       console.log(geo, globalYear);
       renderMap(geo, globalYear)
-      console.log(globalYear)
       renderLineChart(geo)
     });
 
@@ -136,13 +137,41 @@ function myVis(data, eng) {
   const svg = d3.select('#map')
     .append('svg')
     .attr('height', plotHeight)
-    .attr('width', plotWidth)
+    .attr('width', plotWidth+50)
     .append("g");
 
 
-  svg.append("rect").attr('width', plotWidth).attr('height', plotHeight)
+  svg.append("rect").attr('width', plotWidth+50).attr('height', plotHeight)
       .style('stroke', 'black').style('fill', 'none');
 
+
+  const smallMapSVG = d3.select('#small-map')
+    .append('svg')
+    .attr('height', 320)
+    .attr('width', 220)
+    .append("g");
+
+  var regionCenter = d3.geoCentroid(eng)
+  var regionScale  = 1200;
+  var regionOffset = [220/2, 320/2];
+  var regionProjection = d3.geoMercator().scale(regionScale).center(regionCenter)
+          .translate(regionOffset); 
+  var  regionPath = d3.geoPath().projection(regionProjection);
+
+
+
+  smallMapSVG.append("rect").attr('width', 220).attr('height', 320)
+      .style('stroke', 'none').style('fill', 'none');
+ 
+
+  smallMapSVG.append("g")
+    .attr("id", "regions") 
+    .selectAll("path")
+    .data(topojson.feature(regions, regions.objects.eng_regions).features) 
+    .enter().append("path") 
+    .attr("d", regionPath)
+    .style("stroke-width", "1")
+    .style("stroke", "white");
 
   var legend = svg.append("g")
     .attr("id", "legend");
@@ -169,8 +198,9 @@ function myVis(data, eng) {
     .text(function(d, i) { return legendText[i]; });
 
 
-  function renderLineChart(geoArea, year) {
-    vegaEmbed('#line-chart', regions[geoArea])
+  function renderLineChart(geoArea) {
+    console.log("here")
+    vegaEmbed('#line-chart', regionLineCharts[geoArea])
   }
 
   var nfObject = new Intl.NumberFormat('en-US')
@@ -187,13 +217,13 @@ function myVis(data, eng) {
       var projection = d3.geoMercator().scale(scale).center(center)
           .translate(offset);  
 
-      var path = d3.geoPath().projection(projection);
+      var path = d3.geoPath().projection(projection);}
 
       var bounds  = path.bounds(eng);
       var hscale  = scale*plotWidth  / (bounds[1][0] - bounds[0][0]);
       var vscale  = scale*plotHeight / (bounds[1][1] - bounds[0][1]);
       var scale   = (hscale < vscale) ? hscale : vscale;
-      var offset  = [plotWidth + 23 - (bounds[0][0] + bounds[1][0])/2,
+      var offset  = [plotWidth + 70 - (bounds[0][0] + bounds[1][0])/2,
                        plotHeight + 42 -(bounds[0][1] + bounds[1][1])/2];
 
         // new projection
@@ -205,25 +235,27 @@ function myVis(data, eng) {
       var data = eng.features.filter(function(d) {return d.properties.region_name == geoArea; })
       console.log(data)
 
-      var center = centroids[data[0].properties.region_code]
-      // var center = [-0.1110575105808903, 51.50059566483052]
+      var regionCode = data[0].properties.region_code
+      var center = centroids[regionCode]
       console.log(center)
 
       if (geoArea == 'London') {
         scale = 30000;
+        offset = [plotWidth/2, plotHeight/2];
       } else if (geoArea == 'South East') {
-         scale = 7500;
+         scale = 8000;
+         offset = [plotWidth/2-10, plotHeight/2];
       } else if ( geoArea == 'South West') {
+         offset = [plotWidth/2+50, plotHeight/2];
          scale = 6500;
       } else {
          scale  = 9000;
-      }
-      console.log(center)
-      var offset = [plotWidth/2, plotHeight/2];
-      var projection = d3.geoMercator().scale(scale).center(center)
+         offset = [plotWidth/2+20, plotHeight/2];
+    }
+      projection = d3.geoMercator().scale(scale).center(center)
           .translate(offset);  
 
-      var path = d3.geoPath().projection(projection);
+      path = d3.geoPath().projection(projection);
 
     }
         slider.property("value", year)
@@ -275,7 +307,17 @@ function myVis(data, eng) {
       .style("stroke", "white");
     });
 
+    smallMapSVG.selectAll("path")
+    .attr("fill", function(d) {
+    if(d.id === regionCode){
+      return "#06063C";
+    }
+});
+
+
   }
     renderMap('England', 2019);
+
+    ["#06063c","#c5741d","#902727","#265886","#dab312"]
 
 };
