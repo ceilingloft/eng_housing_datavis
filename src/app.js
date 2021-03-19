@@ -46,8 +46,8 @@ const data_file = './data/la_hpearn_ratio.csv'
 const la_geojson_file = './data/eng_la.json'
 const eng_regions_topo = './data/eng_regions_topo.json'
 
-var legendText = ["", "", "", "", "", ""];
-var legendColors = d3.schemeBlues[8]
+// var legendText = ["", "2%", "5", "8", "11", "14", "17", "20"];
+// var legendColors = d3.schemeBlues[9]
 
 Promise.all([
     d3.csv(data_file),
@@ -126,17 +126,69 @@ function myVis(data, eng, regions) {
   .attr("class", "tooltip")
   .style("opacity", 0);
 
-  var color = d3.scaleQuantize([0, 20], d3.schemeBlues[8])
+// var x = d3.scaleLinear()
+//     .domain([2, 20])
+//     .rangeRound([100, 800]);
 
-  const svg = d3.select('#map')
+//   var color = d3.scaleThreshold()
+//     .domain(d3.range(2, 20))
+//     .range(d3.schemeBlues[9]);
+
+  // var color = d3.scaleThreshold()
+  //   .domain(d3.range(2, 20))
+  //   .range(d3.schemeBlues[9]) 
+
+
+const svg = d3.select('#map')
     .append('svg')
     .attr('height', plotHeight+10)
     .attr('width', plotWidth+100)
     .append("g");
 
 
-  svg.append("rect").attr('width', plotWidth+100).attr('height', plotHeight+10)
+svg.append("rect").attr('width', plotWidth+100).attr('height', plotHeight+10)
       .style('stroke', 'black').style('fill', 'none');
+
+var x = d3.scaleLinear()
+    .domain([1, 10])
+    .rangeRound([640, 720]);
+
+var color = d3.scaleThreshold()
+    .domain([3,6,9,12,15,18,21])
+    .range(d3.schemeBlues[7]);
+
+var g = svg.append("g")
+    .attr("class", "key")
+    .attr("transform", "translate(-200,40)");
+
+g.selectAll("rect")
+  .data(color.range().map(function(d) {
+      d = color.invertExtent(d);
+      if (d[0] == null) d[0] = x.domain()[0];
+      if (d[1] == null) d[1] = x.domain()[1];
+      return d;
+    }))
+  .enter().append("rect")
+    .attr("height", 8)
+    .attr("x", function(d) { return x(d[0]); })
+    .attr("width", function(d) { return x(d[1]) - x(d[0]); })
+    .attr("fill", function(d) { return color(d[0]); });
+
+g.append("text")
+    .attr("class", "caption")
+    .attr("x", x.range()[0])
+    .attr("y", -6)
+    .attr("fill", "#000")
+    .attr("text-anchor", "start")
+    .attr("font-weight", "bold")
+    .text("Ratio (House price:earnings)");
+
+g.call(d3.axisBottom(x)
+    .tickSize(13)
+    .tickFormat(function(x, i) { return i ? x : x + ""; })
+    .tickValues(color.domain()))
+  .select(".domain")
+    .remove();
 
 
   const smallMapSVG = d3.select('#small-map')
@@ -165,29 +217,29 @@ function myVis(data, eng, regions) {
     .style("stroke-width", "1")
     .style("stroke", "white");
 
-  var legend = svg.append("g")
-    .attr("id", "legend");
+  // var legend = svg.append("g")
+  //   .attr("id", "legend");
 
-  var legenditem = legend.selectAll(".legenditem")
-    .data(d3.range(9))
-    .enter()
-    .append("g")
-      .attr("class", "legenditem")
-      .attr("transform", function(d, i) { return "translate(" + i * 20 + ",0)"; });
+  // var legenditem = legend.selectAll(".legenditem")
+  //   .data(d3.range(9))
+  //   .enter()
+  //   .append("g")
+  //     .attr("class", "legenditem")
+  //     .attr("transform", function(d, i) { return "translate(" + i * 20 + ",0)"; });
 
-  legenditem.append("rect")
-    .attr("x", width - 100)
-    .attr("y", 24)
-    .attr("width", 20)
-    .attr("height", 6)
-    .attr("class", "rect")
-    .style("fill", function(d, i) { return legendColors[i]; });
+  // legenditem.append("rect")
+  //   .attr("x", width - 100)
+  //   .attr("y", 24)
+  //   .attr("width", 20)
+  //   .attr("height", 6)
+  //   .attr("class", "rect")
+  //   .style("fill", function(d, i) { return legendColors[i]; });
 
-  legenditem.append("text")
-    .attr("x", width - 100)
-    .attr("y", 18)
-    .style("text-anchor", "middle")
-    .text(function(d, i) { return legendText[i]; });
+  // legenditem.append("text")
+  //   .attr("x", width - 100)
+  //   .attr("y", 18)
+  //   .style("text-anchor", "middle")
+  //   .text(function(d, i) { return legendText[i]; });
 
 
   function renderLineChart(geoArea) {
