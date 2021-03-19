@@ -42,9 +42,9 @@ const margin = {left: 50, top: 50, bottom: 50, right: 50};
 const plotWidth = width + margin.left + margin.right;
 const plotHeight = height + margin.top + margin.bottom;
 
-const data_file = 'data/la_hpearn_ratio.csv'
-const la_geojson_file = 'data/eng_la.json'
-const eng_regions_topo = 'data/eng_regions_topo.json'
+const data_file = './data/la_hpearn_ratio.csv'
+const la_geojson_file = './data/eng_la.json'
+const eng_regions_topo = './data/eng_regions_topo.json'
 
 var legendText = ["", "", "", "", "", ""];
 var legendColors = d3.schemeBlues[8]
