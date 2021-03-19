@@ -159,10 +159,8 @@ function myVis(data, eng, regions) {
   var  regionPath = d3.geoPath().projection(regionProjection);
 
 
-
   smallMapSVG.append("rect").attr('width', 220).attr('height', 320)
-      .style('stroke', 'none').style('fill', 'none');
- 
+      .style('stroke', 'none').style('fill', 'none'); 
 
   smallMapSVG.append("g")
     .attr("id", "regions") 
@@ -199,7 +197,6 @@ function myVis(data, eng, regions) {
 
 
   function renderLineChart(geoArea) {
-    console.log("here")
     vegaEmbed('#line-chart', regionLineCharts[geoArea])
   }
 
@@ -217,7 +214,7 @@ function myVis(data, eng, regions) {
       var projection = d3.geoMercator().scale(scale).center(center)
           .translate(offset);  
 
-      var path = d3.geoPath().projection(projection);}
+      var path = d3.geoPath().projection(projection);
 
       var bounds  = path.bounds(eng);
       var hscale  = scale*plotWidth  / (bounds[1][0] - bounds[0][0]);
@@ -233,33 +230,31 @@ function myVis(data, eng, regions) {
       path = path.projection(projection);}
     else {
       var data = eng.features.filter(function(d) {return d.properties.region_name == geoArea; })
-      console.log(data)
 
       var regionCode = data[0].properties.region_code
       var center = centroids[regionCode]
-      console.log(center)
 
       if (geoArea == 'London') {
-        scale = 30000;
-        offset = [plotWidth/2, plotHeight/2];
+        var scale = 30000;
+        var offset = [plotWidth/2, plotHeight/2];
       } else if (geoArea == 'South East') {
-         scale = 8000;
-         offset = [plotWidth/2-10, plotHeight/2];
+         var scale = 8000;
+         var offset = [plotWidth/2-10, plotHeight/2];
       } else if ( geoArea == 'South West') {
-         offset = [plotWidth/2+50, plotHeight/2];
-         scale = 6500;
+         var offset = [plotWidth/2+50, plotHeight/2];
+         var scale = 6500;
       } else {
-         scale  = 9000;
-         offset = [plotWidth/2+20, plotHeight/2];
+         var scale  = 9000;
+         var offset = [plotWidth/2+20, plotHeight/2];
     }
-      projection = d3.geoMercator().scale(scale).center(center)
+      var projection = d3.geoMercator().scale(scale).center(center)
           .translate(offset);  
 
-      path = d3.geoPath().projection(projection);
+      var path = d3.geoPath().projection(projection);
 
     }
-        slider.property("value", year)
-        d3.select('.year').text(year);
+      slider.property("value", year)
+      d3.select('.year').text(year);
     
       d3.selectAll(".local_authority").remove();
       
@@ -311,13 +306,11 @@ function myVis(data, eng, regions) {
     .attr("fill", function(d) {
     if(d.id === regionCode){
       return "#06063C";
-    }
-});
-
+    }});
 
   }
     renderMap('England', 2019);
 
-    ["#06063c","#c5741d","#902727","#265886","#dab312"]
+    // ["#06063c","#c5741d","#902727","#265886","#dab312"]
 
 };
