@@ -13,7 +13,7 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   margin-top: 50px;
-  margin-left: 10%;
+  margin-left: 12%;
   margin-bottom: 100px;
 }
 
@@ -39,7 +39,7 @@ h1 {
   justify-content: flex-start;
   align-items: flex-start;
   margin-top: 50px;
-  margin-left: 10%;
+  margin-left: 12%;
 }
 
 #legend text {
@@ -80,8 +80,11 @@ h1 {
 
 
 .big-flex-child  {
-    flex: 0 0 40%;
-    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 100px;
       }
 
 .right-flex-box {
@@ -90,17 +93,27 @@ h1 {
 }  
 
 .top-legend-box {
+  position: relative;
 	display: flex;
   flex-direction: row;
 }
 
 
 .drop-down {
-  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   height: 25px;
   font-size: 18px;
-  margin-left:350px;
+  margin-left:110px;
+}
 
+.select-text {
+  width: 100px;
+  position: absolute;
+  bottom: 0;
+  margin-left:390px;
+  font-size: 14px;
 }
 
 .slider_box {
@@ -108,15 +121,45 @@ h1 {
 	flex-direction: column;
 }
 
+.slider-text {
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+}
+
+.year {
+  margin-left: 130px;
+}
+
 .subheading {
 	display: flex;
 	flex-direction: row;
-    font-size: 22px;
+  font-size: 22px;
 }
 
 .slider {
+  margin-left:10px;
 	display: flex;
 	flex-direction: row;
+}
+
+#small-map {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;    
+  margin-top: 30px;
+  margin-bottom: 40px;
+  margin-right: 10%;
+}
+
+#line-chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  margin-right: 10%;
 }
 
 .ratio_explanation {

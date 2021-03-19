@@ -126,18 +126,6 @@ function myVis(data, eng, regions) {
   .attr("class", "tooltip")
   .style("opacity", 0);
 
-// var x = d3.scaleLinear()
-//     .domain([2, 20])
-//     .rangeRound([100, 800]);
-
-//   var color = d3.scaleThreshold()
-//     .domain(d3.range(2, 20))
-//     .range(d3.schemeBlues[9]);
-
-  // var color = d3.scaleThreshold()
-  //   .domain(d3.range(2, 20))
-  //   .range(d3.schemeBlues[9]) 
-
 
 const svg = d3.select('#map')
     .append('svg')
@@ -154,8 +142,8 @@ var x = d3.scaleLinear()
     .rangeRound([640, 720]);
 
 var color = d3.scaleThreshold()
-    .domain([3,6,9,12,15,18,21])
-    .range(d3.schemeBlues[7]);
+    .domain([0,3,6,9,12,15,18,21])
+    .range(["#E8EEF9","#bfd4ec","#a7bedc","#839dc5","#5574a6","#3b588d","#28427d","#06063c"]);
 
 var g = svg.append("g")
     .attr("class", "key")
@@ -185,7 +173,7 @@ g.append("text")
 
 g.call(d3.axisBottom(x)
     .tickSize(13)
-    .tickFormat(function(x, i) { return i ? x : x + ""; })
+    .tickFormat(function(x, i) { return i ? x : x + " (NA)"; })
     .tickValues(color.domain()))
   .select(".domain")
     .remove();
@@ -193,19 +181,19 @@ g.call(d3.axisBottom(x)
 
   const smallMapSVG = d3.select('#small-map')
     .append('svg')
-    .attr('height', 320)
+    .attr('height', 220)
     .attr('width', 220)
     .append("g");
 
   var regionCenter = d3.geoCentroid(eng)
   var regionScale  = 1200;
-  var regionOffset = [220/2, 320/2];
+  var regionOffset = [220/2, 220/2];
   var regionProjection = d3.geoMercator().scale(regionScale).center(regionCenter)
           .translate(regionOffset); 
   var  regionPath = d3.geoPath().projection(regionProjection);
 
 
-  smallMapSVG.append("rect").attr('width', 220).attr('height', 320)
+  smallMapSVG.append("rect").attr('width', 220).attr('height', 220)
       .style('stroke', 'none').style('fill', 'none'); 
 
   smallMapSVG.append("g")
@@ -216,30 +204,6 @@ g.call(d3.axisBottom(x)
     .attr("d", regionPath)
     .style("stroke-width", "1")
     .style("stroke", "white");
-
-  // var legend = svg.append("g")
-  //   .attr("id", "legend");
-
-  // var legenditem = legend.selectAll(".legenditem")
-  //   .data(d3.range(9))
-  //   .enter()
-  //   .append("g")
-  //     .attr("class", "legenditem")
-  //     .attr("transform", function(d, i) { return "translate(" + i * 20 + ",0)"; });
-
-  // legenditem.append("rect")
-  //   .attr("x", width - 100)
-  //   .attr("y", 24)
-  //   .attr("width", 20)
-  //   .attr("height", 6)
-  //   .attr("class", "rect")
-  //   .style("fill", function(d, i) { return legendColors[i]; });
-
-  // legenditem.append("text")
-  //   .attr("x", width - 100)
-  //   .attr("y", 18)
-  //   .style("text-anchor", "middle")
-  //   .text(function(d, i) { return legendText[i]; });
 
 
   function renderLineChart(geoArea) {
