@@ -10,6 +10,9 @@ Data Visualization for Policy Analysis (Winter 2021).
 
 ## Data source
 
-The data used in this project is the Office for National Statistics [House price to workplace-based earnings ratio](https://www.ons.gov.uk/peoplepopulationandcommunity/housing/datasets/ratioofhousepricetoworkplacebasedearningslowerquartileandmedian)
+The house price and earnings data used in this project is the Office for National Statistics [House price to workplace-based earnings ratio](https://www.ons.gov.uk/peoplepopulationandcommunity/housing/datasets/ratioofhousepricetoworkplacebasedearningslowerquartileandmedian)
 
+The geometry data is from Office for National Statistics Open Geography Portal:
+* [Local Authority](https://geoportal.statistics.gov.uk/datasets/1d78d47c87df4212b79fe2323aae8e08_0?geometry=-44.292%2C51.101%2C39.424%2C59.782)
+* [Regions](https://geoportal.statistics.gov.uk/datasets/324a9f3ad2cc4a049e913dddc508aeb2_0)
 
